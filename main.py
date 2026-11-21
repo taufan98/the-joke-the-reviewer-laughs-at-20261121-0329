@@ -12,12 +12,19 @@ not only whitespace).
 import os
 import sys
 
+# The joke lives in the data, not buried in main(): the em-dash is the
+# hinge -- everything before it is the heroic setup (47 files for one
+# typo), everything after it is the punchline (the one file that had
+# the typo is the one it missed). One line, no trailing newline: the
+# gate counts code points, and a stray newline would be a second line.
+JOKE = "My coding agent rewrote 47 files to fix one typo \u2014 and missed the only file that had it."
+
 
 def main() -> int:
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, "entry.txt")
-    joke = "My coding agent rewrote 47 files to fix one typo \u2014 and missed the only file that had it."
+    joke = JOKE
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(joke)
     chars = len(joke)

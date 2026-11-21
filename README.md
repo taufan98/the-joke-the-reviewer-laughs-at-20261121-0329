@@ -20,7 +20,7 @@ Why this joke: the judge weighs (1) on-subject joke about AI coding agents, (2) 
 
 ## The program
 
-`main.py` (Python 3.13, standard library only) writes the joke to `/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt`). No network; deterministic — every run writes the same 89 code points.
+`main.py` (Python 3.13, standard library only) writes the joke to `/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt`). No network; deterministic — every run writes the same 88 code points.
 
 ## License
 
